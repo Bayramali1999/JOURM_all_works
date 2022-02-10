@@ -1,10 +1,10 @@
 package com.example.jourm;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.jourm.splash.SplashFragment;
 import com.example.jourm.ui.MainViewActivity;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 startActivity(new Intent(MainActivity.this, MainViewActivity.class));
-            finish();
+                finish();
             }
         }, 5000);
     }

@@ -3,8 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/android/JOURM/app/src/main/res/drawable/btn_style.xml" value="0.185" />
+        <entry key="..\:/android/JOURM/app/src/main/res/drawable/et_input_style.xml" value="0.325" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/activity_main.xml" value="0.37832204273058884" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/activity_main_view.xml" value="0.378125" />
+        <entry key="..\:/android/JOURM/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/fragment_splash.xml" value="0.378125" />
       </map>
     </option>
