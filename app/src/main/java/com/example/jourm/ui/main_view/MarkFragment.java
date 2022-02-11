@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.jourm.R;
 
-public class VisitFragment extends Fragment {
+public class MarkFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
