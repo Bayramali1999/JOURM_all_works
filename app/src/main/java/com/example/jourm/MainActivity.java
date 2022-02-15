@@ -6,7 +6,7 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.jourm.splash.SplashFragment;
+import com.example.jourm.widget.SplashFragment;
 import com.example.jourm.ui.MainViewActivity;
 
 public class MainActivity extends AppCompatActivity {

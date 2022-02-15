@@ -87,6 +87,8 @@
 
 
         <RelativeLayout
+            android:padding="8dp"
+            android:id="@+id/prof_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -119,6 +121,8 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:padding="8dp"
+            android:id="@+id/prof_book"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp">
@@ -152,6 +156,8 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/prof_file"
+            android:padding="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp">
@@ -185,6 +191,8 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/prof_setting"
+            android:padding="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp">

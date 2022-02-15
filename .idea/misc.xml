@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/android/JOURM/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.185" />
+        <entry key="..\:/android/JOURM/app/src/main/res/drawable/anketa.xml" value="0.2105" />
+        <entry key="..\:/android/JOURM/app/src/main/res/drawable/arrow.xml" value="0.2105" />
+        <entry key="..\:/android/JOURM/app/src/main/res/drawable/calendar.xml" value="0.2105" />
         <entry key="..\:/android/JOURM/app/src/main/res/drawable/calendar_select.xml" value="0.185" />
         <entry key="..\:/android/JOURM/app/src/main/res/drawable/default_backgraund_style.xml" value="0.2105" />
         <entry key="..\:/android/JOURM/app/src/main/res/drawable/et_input_style.xml" value="0.185" />
@@ -18,16 +21,19 @@
         <entry key="..\:/android/JOURM/app/src/main/res/drawable/mark_select.xml" value="0.185" />
         <entry key="..\:/android/JOURM/app/src/main/res/drawable/nav_border_style.xml" value="0.185" />
         <entry key="..\:/android/JOURM/app/src/main/res/drawable/person_select.xml" value="0.185" />
-        <entry key="..\:/android/JOURM/app/src/main/res/layout/activity_main.xml" value="0.37832204273058884" />
+        <entry key="..\:/android/JOURM/app/src/main/res/drawable/radio_group_style.xml" value="0.2105" />
+        <entry key="..\:/android/JOURM/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/activity_main_view.xml" value="0.33" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/activity_register.xml" value="0.3" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/activity_setting.xml" value="0.3640625" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/fragment_grade.xml" value="0.378125" />
+        <entry key="..\:/android/JOURM/app/src/main/res/layout/fragment_language_change.xml" value="0.2" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/fragment_main.xml" value="0.378125" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/fragment_schedule.xml" value="0.378125" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/fragment_splash.xml" value="0.378125" />
         <entry key="..\:/android/JOURM/app/src/main/res/layout/fragment_visit.xml" value="0.378125" />
+        <entry key="..\:/android/JOURM/app/src/main/res/layout/uzb_layout.xml" value="0.3103890551517743" />
       </map>
     </option>
   </component>
