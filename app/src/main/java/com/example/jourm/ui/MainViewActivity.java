@@ -137,7 +137,7 @@ public class MainViewActivity extends AppCompatActivity {
         gradeLayout.setBackgroundResource(R.drawable.default_backgraund_style);
         profileLayout.setBackgroundResource(R.drawable.default_backgraund_style);
 
-        homeImage.setImageResource(R.drawable.home);
+        homeImage.setImageResource(R.drawable.home_selected);
         calendarImage.setImageResource(R.drawable.calendar);
         markImage.setImageResource(R.drawable.mark);
         gradeImage.setImageResource(R.drawable.grade);
@@ -162,25 +162,25 @@ public class MainViewActivity extends AppCompatActivity {
             case 2:
                 //calendar
                 calendarLayout.setBackgroundResource(R.drawable.nav_border_style);
-                calendarImage.setImageResource(R.drawable.calendar_select);
+//                calendarImage.setImageResource(R.drawable.calendar_select);
                 calendarTV.setTextColor(R.color.main_color);
                 break;
             case 3:
                 //grade
                 gradeLayout.setBackgroundResource(R.drawable.nav_border_style);
-                gradeImage.setImageResource(R.drawable.grade_select);
+//                gradeImage.setImageResource(R.drawable.grade_select);
                 gradeTV.setTextColor(R.color.main_color);
                 break;
             case 4:
                 //mark
                 markLayout.setBackgroundResource(R.drawable.nav_border_style);
-                markImage.setImageResource(R.drawable.mark_select);
+//                markImage.setImageResource(R.drawable.mark_select);
                 markTV.setTextColor(R.color.main_color);
                 break;
             case 5:
                 //profile
                 profileLayout.setBackgroundResource(R.drawable.nav_border_style);
-                profileImage.setImageResource(R.drawable.person_select);
+//                profileImage.setImageResource(R.drawable.person_select);
                 profileTV.setTextColor(R.color.main_color);
                 break;
         }
