@@ -156,7 +156,7 @@ public class MainViewActivity extends AppCompatActivity {
             case 1:
                 //home
                 homeLayout.setBackgroundResource(R.drawable.nav_border_style);
-                homeImage.setImageResource(R.drawable.home_selected);
+                homeImage.setImageResource(R.drawable.home_select);
                 homeTV.setTextColor(R.color.main_color);
                 break;
             case 2:
