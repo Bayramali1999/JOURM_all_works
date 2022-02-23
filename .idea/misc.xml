@@ -38,8 +38,9 @@
         <entry key="..\:/android/JOURM_all_works/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2985" />
         <entry key="..\:/android/JOURM_all_works/app/src/main/res/drawable/radio_group_style.xml" value="0.2985" />
         <entry key="..\:/android/JOURM_all_works/app/src/main/res/layout/activity_main_view.xml" value="0.33" />
-        <entry key="..\:/android/JOURM_all_works/app/src/main/res/layout/activity_register.xml" value="0.18802083333333333" />
+        <entry key="..\:/android/JOURM_all_works/app/src/main/res/layout/activity_register.xml" value="0.33" />
         <entry key="..\:/android/JOURM_all_works/app/src/main/res/layout/activity_setting.xml" value="0.18802083333333333" />
+        <entry key="..\:/android/JOURM_all_works/app/src/main/res/layout/fragment_splash.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>

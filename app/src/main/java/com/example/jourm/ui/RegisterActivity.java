@@ -2,7 +2,9 @@ package com.example.jourm.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.text.TextUtils;
+import android.text.method.DigitsKeyListener;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +23,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.redmadrobot.inputmask.MaskedTextChangedListener;
+import com.redmadrobot.inputmask.helper.AffinityCalculationStrategy;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -33,7 +39,7 @@ public class RegisterActivity extends AppCompatActivity {
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallback;
     private String mVerificationId;
     private PhoneAuthProvider.ForceResendingToken mResendToken;
-
+//private Inp
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +90,23 @@ public class RegisterActivity extends AppCompatActivity {
         btnSms = findViewById(R.id.btn_continue_sms);
         etPhone = findViewById(R.id.et_phone_number);
         etSms = findViewById(R.id.et_sms_code);
+
+
+        final List<String> affineFormats = new ArrayList<>();
+        affineFormats.add("+998 ([00]) [000]-[00]-[00]");
+
+        final MaskedTextChangedListener listener = MaskedTextChangedListener.Companion.installOn(
+                etPhone,
+                "+998 ([00]) [000]-[00]-[00]",
+                affineFormats,
+                AffinityCalculationStrategy.PREFIX,
+                (maskFilled, extractedValue, formattedText) -> {
+                    // todo:  here text
+                }
+        );
+
+        etPhone.setHint(listener.placeholder());
+
 
         mCallback = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
 

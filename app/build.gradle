@@ -45,6 +45,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:20.0.2'
     implementation 'com.google.firebase:firebase-storage:20.0.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.github.RedMadRobot:input-mask-android:6.1.0'
 }
 
 apply plugin: 'com.android.application'
