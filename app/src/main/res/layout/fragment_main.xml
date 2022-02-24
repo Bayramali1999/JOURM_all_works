@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,9 +7,335 @@
     tools:context=".ui.main_view.HomeFragment">
 
     <TextView
+        android:id="@+id/tv_home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:text="Главный"
+        android:textAlignment="textStart"
         android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/fsfsd"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Home" />
+        android:layout_below="@id/tv_home_title"
+        android:background="@color/all_back_color"
+        android:padding="8dp">
 
-</FrameLayout>
+        <RelativeLayout
+            android:id="@+id/gre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:text="Yaqin qolgan imtihonlar"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:id="@+id/header_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:id="@+id/tv_exwqeqwasd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All"
+                    android:textColor="@color/main_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_exswqead"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_alignParentEnd="true"
+                    android:padding="4dp"
+                    android:src="@drawable/arrow_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containercha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header_all"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_examin_style">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="24"
+                        android:textAlignment="center"
+                        android:textColor="@color/main_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="APR"
+                        android:textAlignment="center"
+                        android:textColor="@color/hint_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Xalqaro iqtisodiyot qonuni "
+                        android:textColor="@color/hint_color"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="onlayin"
+                        android:textColor="@color/main_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/custom_background_style">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ATB342"
+                        android:textAlignment="center"
+                        android:textColor="@color/main_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containercha"
+                android:layout_marginTop="20dp"
+                android:text="Yangiliklar"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/heasdader_allsda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/containercha"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_exwqeqwassdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All"
+                    android:textColor="@color/main_color"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_exswqeasdsad"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:padding="4dp"
+                    android:src="@drawable/arrow_blue" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/red_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heasdader_allsda"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_examin_style_without_left"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:background="@drawable/border_style_home_blue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Etibor qarating"
+                        android:textColor="@color/hint_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Kitobni qanday qidirish uni ykulab olish va foydalanish mumkinliga xaqidagi qo';llanmalarni  ishlatish va unda bo'ladigan yabasdjak "
+                        android:textColor="@color/hint_color"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Xammasini o'qish"
+                        android:textColor="@color/main_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/yellow_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/red_container"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_examin_style_without_left"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:background="@drawable/border_style_home_yellow" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Zamonaviy texnalogiyalarni onlinayn o'rganish"
+                        android:textColor="@color/hint_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Kitobni qanday qidirish uni ykulab olish va foydalanish mumkinliga xaqidagi qo';llanmalarni  ishlatish va unda bo'ladigan yabasdjak "
+                        android:textColor="@color/hint_color"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Xammasini o'qish"
+                        android:textColor="@color/main_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/blue_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/yellow_container"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_examin_style_without_left"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="30"
+                    android:background="@drawable/border_style_home" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Zamonaviy texnalogiyalarni onlinayn o'rganish"
+                        android:textColor="@color/hint_color"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Kitobni qanday qidirish uni ykulab olish va foydalanish mumkinliga xaqidagi qo';llanmalarni  ishlatish va unda bo'ladigan yabasdjak "
+                        android:textColor="@color/hint_color"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Xammasini o'qish"
+                        android:textColor="@color/main_color"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
