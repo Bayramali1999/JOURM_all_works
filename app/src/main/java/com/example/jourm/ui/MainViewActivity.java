@@ -150,38 +150,37 @@ public class MainViewActivity extends AppCompatActivity {
         profileTV.setTextColor(R.color.hint_color);
     }
 
-    @SuppressLint("ResourceAsColor")
     private void changeStyle(int i) {
         switch (i) {
             case 1:
-                //home
+                //todo home
                 homeLayout.setBackgroundResource(R.drawable.nav_border_style);
                 homeImage.setImageResource(R.drawable.home_select);
-                homeTV.setTextColor(R.color.main_color);
+                homeTV.setTextColor(getResources().getColor(R.color.main_color));
                 break;
             case 2:
-                //calendar
+                //todo calendar
                 calendarLayout.setBackgroundResource(R.drawable.nav_border_style);
                 calendarImage.setImageResource(R.drawable.calendar_select);
-                calendarTV.setTextColor(R.color.main_color);
+                calendarTV.setTextColor(getResources().getColor(R.color.main_color));
                 break;
             case 3:
-                //grade
+                //todo grade
                 gradeLayout.setBackgroundResource(R.drawable.nav_border_style);
                 gradeImage.setImageResource(R.drawable.grade_select);
-                gradeTV.setTextColor(R.color.main_color);
+                gradeTV.setTextColor(getResources().getColor(R.color.main_color));
                 break;
             case 4:
-                //mark
+                //todo mark
                 markLayout.setBackgroundResource(R.drawable.nav_border_style);
                 markImage.setImageResource(R.drawable.mark_select);
-                markTV.setTextColor(R.color.main_color);
+                markTV.setTextColor(getResources().getColor(R.color.main_color));
                 break;
             case 5:
-                //profile
+                //todo profile
                 profileLayout.setBackgroundResource(R.drawable.nav_border_style);
                 profileImage.setImageResource(R.drawable.person_select);
-                profileTV.setTextColor(R.color.main_color);
+                profileTV.setTextColor(getResources().getColor(R.color.main_color));
                 break;
         }
     }
@@ -190,11 +189,11 @@ public class MainViewActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (currentUser == null) {
-            gotoLoginActivity();
+            gotoRegisterActivity();
         }
     }
 
-    private void gotoLoginActivity() {
+    private void gotoRegisterActivity() {
         Intent intent = new Intent(this, RegisterActivity.class);
         startActivity(intent);
         finish();

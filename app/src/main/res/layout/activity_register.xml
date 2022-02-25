@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -47,11 +48,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/et_input_style"
-                android:digits="0123456789-.()+"
+                android:digits="0123456789-.()+[]"
                 android:hint="Введите номер телефона"
-                android:inputType="number"
+                android:inputType="phone"
                 android:textColor="@color/black"
-                android:textColorHint="@color/hint_color" />
+                android:textColorHint="@color/hint_color"/>
         </LinearLayout>
     </ScrollView>
 
@@ -70,9 +71,9 @@
             android:padding="16dp">
 
             <TextView
-                android:padding="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:padding="8dp"
                 android:text="Cмс код"
                 android:textColor="@color/black" />
 
@@ -81,9 +82,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/et_input_style"
-                android:digits="0123456789-.()+"
                 android:hint="Введите смс код"
                 android:inputType="number"
+                android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textColorHint="@color/hint_color" />
         </LinearLayout>
