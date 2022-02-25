@@ -14,8 +14,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
         android:padding="8dp"
-        android:text="Расписание"
-        android:textAlignment="textStart"
+        android:text="Оценки"
+        android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
@@ -29,9 +29,8 @@
         android:orientation="vertical">
 
 
-
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/calendar_tl"
+            android:id="@+id/grade_tl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="4dp"
@@ -44,9 +43,8 @@
             app:tabTextColor="@color/hint_color" />
 
 
-
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/calendar_vp"
+            android:id="@+id/grade_vp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="4dp" />
