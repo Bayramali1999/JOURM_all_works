@@ -79,7 +79,7 @@
                 android:id="@+id/tv_calendar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Расписание "
+                android:text="Расписание"
                 android:textAlignment="center"
                 android:textColor="@color/hint_color"
                 android:textSize="10sp"

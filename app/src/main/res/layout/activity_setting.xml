@@ -25,8 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
-        android:paddingStart="30dp"
         android:layout_marginEnd="30dp"
+        android:paddingStart="30dp"
         app:layout_constraintTop_toBottomOf="@id/tv_setting">
 
 
@@ -57,11 +57,11 @@
     </RelativeLayout>
 
     <RelativeLayout
-android:layout_marginEnd="30dp"
         android:id="@+id/setting_out"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
         android:paddingStart="30dp"
         app:layout_constraintTop_toBottomOf="@id/setting_lan">
 
@@ -79,7 +79,7 @@ android:layout_marginEnd="30dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:layout_toEndOf="@+id/iv_exs"
-            android:text="Language"
+            android:text="Log out"
             android:textColor="@color/black"
             android:textSize="16sp" />
 

@@ -87,10 +87,10 @@
 
 
         <RelativeLayout
-            android:padding="8dp"
             android:id="@+id/prof_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="8dp">
 
             <ImageView
                 android:id="@+id/iv_prof"
@@ -106,7 +106,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="4dp"
                 android:layout_toEndOf="@+id/iv_prof"
-                android:text="sadasdsadsadasdsadada"
+                android:text="Studentlar anketasi "
                 android:textColor="@color/hint_color"
                 android:textSize="15dp"
                 android:textStyle="bold" />
@@ -121,11 +121,11 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:padding="8dp"
             android:id="@+id/prof_book"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:padding="8dp">
 
             <ImageView
                 android:id="@+id/iv_umdk"
@@ -141,7 +141,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="4dp"
                 android:layout_toEndOf="@+id/iv_umdk"
-                android:text="sadasdsadsadasdsadada"
+                android:text="UMKD"
                 android:textColor="@color/hint_color"
                 android:textSize="15dp"
                 android:textStyle="bold" />
@@ -157,10 +157,10 @@
 
         <RelativeLayout
             android:id="@+id/prof_file"
-            android:padding="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:padding="8dp">
 
             <ImageView
                 android:id="@+id/iv_e_usluga"
@@ -176,7 +176,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="4dp"
                 android:layout_toEndOf="@+id/iv_e_usluga"
-                android:text="sadasdsadsadasdsadada"
+                android:text="E-shartlar"
                 android:textColor="@color/hint_color"
                 android:textSize="15dp"
                 android:textStyle="bold" />
@@ -192,10 +192,10 @@
 
         <RelativeLayout
             android:id="@+id/prof_setting"
-            android:padding="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="16dp"
+            android:padding="8dp">
 
             <ImageView
                 android:id="@+id/iv_setting"
@@ -211,7 +211,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="4dp"
                 android:layout_toEndOf="@+id/iv_setting"
-                android:text="sadasdsadsadasdsadada"
+                android:text="Sozlamalar"
                 android:textColor="@color/hint_color"
                 android:textSize="15dp"
                 android:textStyle="bold" />

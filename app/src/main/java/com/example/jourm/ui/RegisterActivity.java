@@ -3,10 +3,12 @@ package com.example.jourm.ui;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ScrollView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,11 +19,14 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.redmadrobot.inputmask.MaskedTextChangedListener;
+import com.redmadrobot.inputmask.helper.AffinityCalculationStrategy;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -31,9 +36,9 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText etPhone, etSms;
     private FirebaseAuth mAuth;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallback;
-    private String mVerificationId;
+    private String mVerificationId = "";
     private PhoneAuthProvider.ForceResendingToken mResendToken;
-
+    private String myPhone = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +46,16 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         ini();
+
         btnPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                sendPhoneNumber();
-                checkPhoneEt();
+                if (myPhone.length() == 13) {
+                    sendPhoneNumber();
+                    checkPhoneEt();
+                } else {
+                    etPhone.setBackgroundResource(R.drawable.input_error_style);
+                }
             }
         });
 
@@ -56,6 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
                 checkSms();
             }
         });
+        setupPrefixPhone();
     }
 
     private void checkSms() {
@@ -67,13 +77,10 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     private void checkPhoneEt() {
-        if (true) {
-
-            btnPhone.setVisibility(View.GONE);
-            svPhone.setVisibility(View.GONE);
-            btnSms.setVisibility(View.VISIBLE);
-            svSms.setVisibility(View.VISIBLE);
-        }
+        btnPhone.setVisibility(View.GONE);
+        svPhone.setVisibility(View.GONE);
+        btnSms.setVisibility(View.VISIBLE);
+        svSms.setVisibility(View.VISIBLE);
     }
 
     private void ini() {
@@ -90,10 +97,13 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onVerificationCompleted(@NonNull PhoneAuthCredential credential) {
                 signInWithPhoneAuthCredential(credential);
+                Toast.makeText(RegisterActivity.this, "onVerificationCompleted", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onVerificationFailed(@NonNull FirebaseException e) {
+                Toast.makeText(RegisterActivity.this, "onVerificationFailed", Toast.LENGTH_SHORT).show();
+                Log.d("TAG", "onVerificationFailed: " + e.getMessage());
             }
 
             @Override
@@ -101,20 +111,25 @@ public class RegisterActivity extends AppCompatActivity {
                                    @NonNull PhoneAuthProvider.ForceResendingToken token) {
                 mVerificationId = verificationId;
                 mResendToken = token;
+                Toast.makeText(RegisterActivity.this, "onCodeSent", Toast.LENGTH_SHORT).show();
             }
         };
     }
 
 
     private void sendPhoneNumber() {
+
         PhoneAuthOptions options =
                 PhoneAuthOptions.newBuilder(mAuth)
-                        .setPhoneNumber("+998998827479")       // Phone number to verify
-                        .setTimeout(60L, TimeUnit.SECONDS) // Timeout and unit
-                        .setActivity(this)                 // Activity (for callback binding)
-                        .setCallbacks(mCallback)          // OnVerificationStateChangedCallbacks
+                        .setPhoneNumber(myPhone)
+                        .setTimeout(30L, TimeUnit.SECONDS)
+                        .setActivity(RegisterActivity.this)
+                        .setCallbacks(mCallback)
                         .build();
+
         PhoneAuthProvider.verifyPhoneNumber(options);
+
+
     }
 
 
@@ -124,10 +139,12 @@ public class RegisterActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-
-                            FirebaseUser user = task.getResult().getUser();
+//                            FirebaseUser user = task.getResult().getUser();
                             gotoMainActivity();
                         } else {
+                            Toast.makeText(RegisterActivity.this,
+                                    "signInWithPhoneAuthCredential",
+                                    Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -139,5 +156,25 @@ public class RegisterActivity extends AppCompatActivity {
         finish();
 
     }
+
+    private void setupPrefixPhone() {
+        final List<String> affineFormats = new ArrayList<>();
+        affineFormats.add("+998 ([00]) [000]-[00]-[00]");
+
+        final MaskedTextChangedListener listener = MaskedTextChangedListener.Companion.installOn(
+                etPhone,
+                "+998 ([00]) [000]-[00]-[00]",
+                affineFormats,
+                AffinityCalculationStrategy.PREFIX,
+                new MaskedTextChangedListener.ValueListener() {
+                    @Override
+                    public void onTextChanged(boolean maskFilled, @NonNull final String extractedValue, @NonNull String formattedText) {
+                        myPhone = "+998" + extractedValue;
+                    }
+                }
+        );
+        etPhone.setHint(listener.placeholder());
+    }
+
 
 }
