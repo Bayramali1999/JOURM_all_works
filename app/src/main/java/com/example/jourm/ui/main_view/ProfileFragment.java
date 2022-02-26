@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import androidx.annotation.NonNull;
@@ -12,11 +13,13 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.jourm.R;
+import com.example.jourm.ui.EditProfileActivity;
 import com.example.jourm.ui.SettingActivity;
 
 public class ProfileFragment extends Fragment {
     private View v;
     private RelativeLayout settingRL;
+    private ImageView editProfileBtn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,6 +27,7 @@ public class ProfileFragment extends Fragment {
 
         v = inflater.inflate(R.layout.fragment_profile, container, false);
         settingRL = v.findViewById(R.id.prof_setting);
+        editProfileBtn = v.findViewById(R.id.etid_profile);
         return v;
     }
 
@@ -35,6 +39,14 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getContext(), SettingActivity.class));
+            }
+        });
+
+        editProfileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), EditProfileActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JOURM">
         <activity
+            android:name=".ui.EditProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.SettingActivity"
+            />
+        <activity
             android:name=".ui.SettingActivity"
             android:exported="false" />
         <activity
